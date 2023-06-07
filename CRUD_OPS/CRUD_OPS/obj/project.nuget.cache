@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fTipb4O+GBW36x/W8Ban3Oi3/YlKofwiRTgPRZqyKQ3qOAmmn8wqFxN9zbS10ypIllCAZn4hsuD1PFwtJ+vB+Q==",
+  "dgSpecHash": "UjuoMXfebGaJiP4WUd7SPlsV7zLVXwbM4azEa8e6OGvk7d9KDu9vQUhnz2yAW3CzbsYsxucAl13LXYinej6HwQ==",
   "success": true,
-  "projectFilePath": "D:\\STUDY MATARIALS\\PROJECTs\\ASP.NET\\CRUD_OPS\\CRUD_OPS\\CRUD_OPS.csproj",
+  "projectFilePath": "D:\\STUDY MATARIALS\\PROJECTs\\CRUD_Ops\\CRUD_OPS\\CRUD_OPS\\CRUD_OPS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Paul Tomal\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Paul Tomal\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

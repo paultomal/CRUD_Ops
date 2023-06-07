@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\STUDY MATARIALS\\PROJECTs\\ASP.NET\\CRUD_OPS\\CRUD_OPS\\CRUD_OPS.csproj": {}
+    "D:\\STUDY MATARIALS\\PROJECTs\\CRUD_Ops\\CRUD_OPS\\CRUD_OPS\\CRUD_OPS.csproj": {}
   },
   "projects": {
-    "D:\\STUDY MATARIALS\\PROJECTs\\ASP.NET\\CRUD_OPS\\CRUD_OPS\\CRUD_OPS.csproj": {
+    "D:\\STUDY MATARIALS\\PROJECTs\\CRUD_Ops\\CRUD_OPS\\CRUD_OPS\\CRUD_OPS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\STUDY MATARIALS\\PROJECTs\\ASP.NET\\CRUD_OPS\\CRUD_OPS\\CRUD_OPS.csproj",
+        "projectUniqueName": "D:\\STUDY MATARIALS\\PROJECTs\\CRUD_Ops\\CRUD_OPS\\CRUD_OPS\\CRUD_OPS.csproj",
         "projectName": "CRUD_OPS",
-        "projectPath": "D:\\STUDY MATARIALS\\PROJECTs\\ASP.NET\\CRUD_OPS\\CRUD_OPS\\CRUD_OPS.csproj",
+        "projectPath": "D:\\STUDY MATARIALS\\PROJECTs\\CRUD_Ops\\CRUD_OPS\\CRUD_OPS\\CRUD_OPS.csproj",
         "packagesPath": "C:\\Users\\Paul Tomal\\.nuget\\packages\\",
-        "outputPath": "D:\\STUDY MATARIALS\\PROJECTs\\ASP.NET\\CRUD_OPS\\CRUD_OPS\\obj\\",
+        "outputPath": "D:\\STUDY MATARIALS\\PROJECTs\\CRUD_Ops\\CRUD_OPS\\CRUD_OPS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Paul Tomal\\AppData\\Roaming\\NuGet\\NuGet.Config",

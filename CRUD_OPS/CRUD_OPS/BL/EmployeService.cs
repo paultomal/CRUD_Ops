@@ -23,10 +23,19 @@ namespace CRUD_OPS.BL
 
         public TblEmployee update(TblEmployee employee)
         {
-            if(employee == null) { 
-                
-            }
-            return employee;
+            var empdata = employeeServicesContext.TblEmployees.Where(e=>e.EmployeeCode == employee.EmployeeCode).ToList();
+  
+                if(empdata.Count == 0)
+               {
+                    employeeServicesContext.TblEmployees.Update(employee);
+                    employeeServicesContext.SaveChanges();
+                    return employee;
+               }
+               else
+               {
+                   return null;
+               }
+            
         }
     }
 }

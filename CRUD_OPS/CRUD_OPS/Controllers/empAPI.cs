@@ -1,4 +1,5 @@
 ﻿using CRUD_OPS.BL;
+using CRUD_OPS.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,6 +19,14 @@ namespace CRUD_OPS.Controllers
         public IActionResult GetEmp()
         {
             var data = emp.getallEmploye();
+            
+            return Ok(data);
+        }
+        [Route("api/updateemp")]
+        [HttpPost]
+        public IActionResult GetEmp(TblEmployee em)
+        {
+            var data = emp.update(em);
             
             return Ok(data);
         }
