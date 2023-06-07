@@ -1,4 +1,5 @@
-﻿using CRUD_OPS.Models;
+﻿using CRUD_OPS.DTO;
+using CRUD_OPS.Models;
 using System.Security.Claims;
 
 namespace CRUD_OPS.BL
@@ -32,6 +33,33 @@ namespace CRUD_OPS.BL
         {
             var data = employeeServicesContext.TblEmployees.Find(ID);
             return data;
+        }
+
+        public List<AttendenceReort> getReport(string month, string year)
+        {
+            List<AttendenceReort> reportList = new List<AttendenceReort>();
+            
+            var attendenceList = employeeServicesContext.TblEmployeeAttendances.Where(e=>e.AttendanceDate.Year.ToString()== year && e.AttendanceDate.Month.ToString()== month).ToList();
+            var emplist = employeeServicesContext.TblEmployees.ToList();
+            foreach( var item in emplist ) {
+                var report = new AttendenceReort();
+                var empattendenceList = attendenceList.Where(e=>e.EmployeeId == item.EmployeeId).ToList();
+                report.TotalPresent = 0;
+                report.TotalOffday = 0;
+                report.TotalAbsence = 0;
+                
+                foreach( var item2 in empattendenceList)
+                {
+                    report.EmployeName = item.EmployeeName;
+                    report.Month = month;
+                    report.TotalPresent = report.TotalPresent + item2.IsPresent;
+                    report.TotalAbsence = report.TotalAbsence + item2.IsAbsent;
+                    report.TotalOffday = report.TotalOffday + item2.IsOffday;
+                }
+                reportList.Add(report);
+
+            }
+            return reportList;
         }
 
         public TblEmployee update(TblEmployee employee)

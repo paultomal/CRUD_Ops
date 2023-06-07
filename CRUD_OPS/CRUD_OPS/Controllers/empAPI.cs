@@ -31,6 +31,14 @@ namespace CRUD_OPS.Controllers
             
             return Ok(data);
         }
+        [Route("api/reort/{month}/{year}")]
+        [HttpGet]
+        public IActionResult GetEmpabs(string month,string year)
+        {
+            var data = emp.getReport(month,year);
+            
+            return Ok(data);
+        }
 
         [Route("api/updateemp")]
         [HttpPost]
