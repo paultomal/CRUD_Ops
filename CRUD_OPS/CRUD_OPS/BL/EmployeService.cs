@@ -10,6 +10,19 @@ namespace CRUD_OPS.BL
             this.employeeServicesContext = employeeServicesContext;
         }
 
+        public List<TblEmployee> getAbsenceEmp()
+        {   List<TblEmployee> epdata = new List<TblEmployee>();
+            var data = employeeServicesContext.TblEmployeeAttendances.Where(e=>e.IsAbsent>0).ToList();
+            var data3 = data.DistinctBy(e=>e.EmployeeId).ToList();
+            foreach ( var item in data3 )
+            {
+                var data1 = employeeServicesContext.TblEmployees.Where(e=>e.EmployeeId == item.EmployeeId).SingleOrDefault();
+                epdata.Add(data1);
+            }
+            
+            return epdata;
+        }
+
         public List<TblEmployee> getallEmploye()
         {
             return employeeServicesContext.TblEmployees.OrderByDescending(e => e.EmployeeSalary).ToList();

@@ -14,6 +14,7 @@ namespace CRUD_OPS.Controllers
         {
             this.emp = emp;
         }
+
         [Route("api/emplist")]
         [HttpGet]
         public IActionResult GetEmp()
@@ -22,6 +23,15 @@ namespace CRUD_OPS.Controllers
             
             return Ok(data);
         }
+        [Route("api/empabslist")]
+        [HttpGet]
+        public IActionResult GetEmpabs()
+        {
+            var data = emp.getAbsenceEmp();
+            
+            return Ok(data);
+        }
+
         [Route("api/updateemp")]
         [HttpPost]
         public IActionResult GetEmp(TblEmployee em)

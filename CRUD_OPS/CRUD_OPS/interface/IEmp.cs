@@ -7,5 +7,6 @@ namespace CRUD_OPS
         List<TblEmployee>  getallEmploye();
         TblEmployee GetEmployeeByID(int ID);
         TblEmployee update(TblEmployee employee);
+        List<TblEmployee> getAbsenceEmp();
     }
 }

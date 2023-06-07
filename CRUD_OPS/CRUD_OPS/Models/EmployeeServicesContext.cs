@@ -53,17 +53,17 @@ namespace CRUD_OPS.Models
 
             modelBuilder.Entity<TblEmployeeAttendance>(entity =>
             {
-                entity.HasKey(e => e.EmployeeId);
-
                 entity.ToTable("tblEmployeeAttendance");
 
-                entity.Property(e => e.EmployeeId)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("employeeId");
+                entity.Property(e => e.Id)
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
 
                 entity.Property(e => e.AttendanceDate)
                     .HasColumnType("datetime")
                     .HasColumnName("attendanceDate");
+
+                entity.Property(e => e.EmployeeId).HasColumnName("employeeId");
 
                 entity.Property(e => e.IsAbsent).HasColumnName("isAbsent");
 
@@ -72,10 +72,10 @@ namespace CRUD_OPS.Models
                 entity.Property(e => e.IsPresent).HasColumnName("isPresent");
 
                 entity.HasOne(d => d.Employee)
-                    .WithOne(p => p.TblEmployeeAttendance)
-                    .HasForeignKey<TblEmployeeAttendance>(d => d.EmployeeId)
+                    .WithMany(p => p.TblEmployeeAttendances)
+                    .HasForeignKey(d => d.EmployeeId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_tblEmployeeAttendance_tblEmployee");
+                    .HasConstraintName("FK_tblEmployeeAttendance_tblEmployee1");
             });
 
             OnModelCreatingPartial(modelBuilder);

@@ -12,7 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<EmployeeServicesContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("constr")
+options.UseLazyLoadingProxies(false). UseSqlServer(builder.Configuration.GetConnectionString("constr")
 ));
 builder.Services.AddScoped<IEmp,EmployeService>();
 
